@@ -1,9 +1,10 @@
-<app-header></app-header>
+<app-header 
+  (featureSelected)="currentTab = $event"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes *ngIf=""></app-recipes>
-      <app-shopping-list *ngIf=""></app-shopping-list>
+      <app-recipes *ngIf="currentTab === 'recipes'"></app-recipes>
+      <app-shopping-list *ngIf="currentTab === 'shopping'"></app-shopping-list>
     </div>
   </div>
 </div>
